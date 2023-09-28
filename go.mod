@@ -1,4 +1,4 @@
-module SpeedPlataform
+module TestYourMight
 
 go 1.21
 

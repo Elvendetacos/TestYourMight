@@ -1,7 +1,7 @@
 package main
 
 import (
-	"SpeedPlataform/src/ui"
+	"TestYourMight/src/ui"
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 )
