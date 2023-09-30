@@ -11,12 +11,15 @@ import (
 	"image/color"
 )
 
+var currentGame *game.Game
+
 func RenderMenu(mainMenu fyne.Window) {
 	mainMenu.Resize(fyne.NewSize(700, 600))
 	menuContent := container.New(layout.NewGridWrapLayout(fyne.NewSize(400, 80)))
 	content := container.New(layout.NewCenterLayout(), menuContent)
 	StartGame := widget.NewButtonWithIcon("Iniciar el juego", theme.ComputerIcon(), func() {
-		game.RenderGame(mainMenu, content)
+		currentGame = game.NewGame(mainMenu, content)
+		currentGame.Render()
 	})
 
 	options := widget.NewButtonWithIcon("Opciones", theme.SettingsIcon(), func() {

@@ -1,4 +1,4 @@
-package game
+package template
 
 import (
 	"fyne.io/fyne/v2"
@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-func screen(mainMenu fyne.Window, content *fyne.Container, text string) {
+func Screen(mainMenu fyne.Window, content *fyne.Container, text string) {
 	textFail := canvas.NewText(text, color.White)
 	textFail.TextSize = 32
 	centerText := container.New(layout.NewCenterLayout(), textFail)
